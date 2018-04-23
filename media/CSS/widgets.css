@@ -10,18 +10,13 @@
 
 /* All */
 * {
-    -GtkButton-inner-border: 0;
-    -GtkEntry-inner-border: 0;
     -GtkComboBox-inner-border: 0;
     -GtkMenuToolButton-inner-border: 0;
     -GtkTreeMenu-inner-border: 0;
     -unico-focus-border-color: transparent; /* Removes the annoying red outline on active buttons*/
-    engine: none; /* Turns off annoying borders */
     border-width: 0px;
-    -GtkWidget-focus-line-width: 0px;
+    outline-width: 0px;
     -GtkTreeView-vertical-separator: 0;
-    -GtkWidget-separator-width: 0;
-    -GtkWidget-separator-height: 0;
 }
 
 /**
@@ -58,7 +53,7 @@ GtkWidget {
     /* Needed for Jessie, removed all the box shadows from widgets */
     box-shadow: inset 0 0, inset 0 0;
     /* Remove weird outline of gifs on Jessie */
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
     /* Remove white outline on some label text */
     text-shadow: none;
 }
@@ -131,11 +126,6 @@ GtkComboBox .menu {
     border-radius: 3px;
 }
 
-GtkComboBox .separator {
-    /* This removes lines in combotextbox*/
-    -GtkWidget-wide-separators: true;
-}
-
 /**
  * Standard checkbuttons/radio-buttons
  */
@@ -158,9 +148,8 @@ GtkRadioButton:disabled {
 .title {
     color: @title_color;
     padding-top:25px;
-    font-family: Bariol;
+    font-family: Bariol Bold;
     font-size: 16pt;
-    font-weight: bold;
 }
 
 /**
@@ -188,9 +177,8 @@ GtkRadioButton:disabled {
 /* Title of menu button on default intro screen (Keyboard, Wfi etc) */
 .menu_intro_label {
     color: @title_color;
-    font-family: Bariol;
+    font-family: Bariol Bold;
     font-size: 18pt;
-    font-weight: bold;
 }
 /* Info about the settings of the curet project */
 .menu_custom_label {
@@ -216,9 +204,8 @@ GtkRadioButton:disabled {
 }
 
 .bold_label {
-    font-family: Bariol;
+    font-family: Bariol Bold;
     font-size: 14px;
-    font-weight: bold;
     color: @title_color;
 }
 
